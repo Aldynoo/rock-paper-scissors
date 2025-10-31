@@ -1,0 +1,20 @@
+{
+  "name": "rock-paper-scissors",
+  "version": "1.0.0",
+  "description": "",
+  "main": "javascript.js",
+  "scripts": {
+    "test": "node javascript.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aldynoo/rock-paper-scissors.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aldynoo/rock-paper-scissors/issues"
+  },
+  "homepage": "https://github.com/Aldynoo/rock-paper-scissors#readme"
+}
