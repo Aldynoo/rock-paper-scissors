@@ -1,5 +1,4 @@
-let humanScore = 0;
-let computerScore = 0;
+
 
 function getComputerChoice() {
     let computerChoice = (Math.random()* 100);
@@ -29,20 +28,36 @@ function getHumanChoice () {
 console.log(getHumanChoice());
 
 
-function playRound (humanChoice, computerChoice) {
-    if (humanChoice === computerChoice) {
+
+
+function playGame () {
+    let humanScore = 0;
+    let computerScore = 0;
+
+
+    function playRound (humanChoice, computerChoice) {
+    if (humanChoice == computerChoice) {
         return "It's a tie";
-    }
-    else if (
+    } else if (
             (humanChoice === "rock" && computerChoice === "scissors") ||
             (humanChoice === "paper" && computerChoice === "rock") ||
             (humanChoice === "scissors" && computerChoice === "paper")
             ){
-                return "You win!"
-            }
-    else 
-        {
-            return "You lose!"
+                return "You win!";
+            } else {
+            return "You lose!";
         }
     }
+
+    if ("You win!") {
+        return humanScore++;
+    }
+    else if ("You lose!") {
+        return computerScore++;
+    }
 console.log(playRound());
+console.log(`You won ${humanScore} times and computer won ${computerScore} times.`);
+
+    
+}
+console.log(playGame());
