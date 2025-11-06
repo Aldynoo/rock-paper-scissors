@@ -15,15 +15,9 @@ console.log(getComputerChoice());
 
 
 function getHumanChoice () {
-    let humanChoice = parseInt(prompt("Enter 1 for 'rock', 2 for 'paper' or 3 for 'scissors'"));
+    let humanChoice = prompt("Enter 'rock', 'paper' or 'scissors'");
 
-    if (humanChoice === 1) {
-        return "rock";
-    } else if (humanChoice === 2) {
-        return "paper";
-    } else {
-        return "scissors";
-    }
+    return humanChoice;
 }
 console.log(getHumanChoice());
 
@@ -36,7 +30,9 @@ function playGame () {
 
 
     function playRound (humanChoice, computerChoice) {
-    if (humanChoice == computerChoice) {
+        humanChoice = humanChoice.toLowerCase();
+
+    if (humanChoice === computerChoice) {
         return "It's a tie";
     } else if (
             (humanChoice === "rock" && computerChoice === "scissors") ||
