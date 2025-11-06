@@ -41,19 +41,24 @@ function playGame () {
             ){
                 return "You win!";
             } else {
-            return "You lose!";
+                return "You lose!";
         }
     }
 
-    if ("You win!") {
-        return humanScore++;
-    }
-    else if ("You lose!") {
-        return computerScore++;
-    }
-console.log(playRound());
-console.log(`You won ${humanScore} times and computer won ${computerScore} times.`);
+    for (let i = 1; i <= 5; i++) {
+        let humanChoice = getHumanChoice();
+        let computerChoice = getComputerChoice();
 
-    
+        let result = playRound(humanChoice, computerChoice);
+
+        if (result === "You win!") {
+            humanScore++;
+        } else if (result === "You lose!") {
+            computerScore++;
+        }
+
+        console.log(`You won ${humanScore} times and computer won ${computerScore} times.`);
+    }
+
 }
-console.log(playGame());
+playGame();
