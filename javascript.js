@@ -1,11 +1,11 @@
 
 
 function getComputerChoice() {
-    let computerChoice = (Math.random()* 100);
+    let computerChoice = Math.random();
 
-    if (computerChoice < 33) {
+    if (computerChoice < 0,33) {
         return "rock";
-    } else if (computerChoice < 66) {
+    } else if (computerChoice < 0,66) {
         return "paper";
     } else {
         return "scissors";
